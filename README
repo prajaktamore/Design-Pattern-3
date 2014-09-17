@@ -1,0 +1,125 @@
+CS542 Design Patterns
+Fall 2013
+PROJECT <1> README FILE
+
+Due Date: <Monday, September, 2013>
+Submission Date: <Monday, September, 2013>
+Grace Period Used This Project: <0> Days
+Grace Period Remaining: <0> Days
+Author(s): <Prajakta More, Kapil Madhavrao Bijamwar>
+e-mail(s): <pmore2@binghamton.edu, kbijamw1@binghamton.edu>
+
+
+PURPOSE:
+[
+  The purpose of this project is to use multiple NN threads to read 200 records from the data file 
+  and store these records into the data structure. Here we are using Vector as the data structure to store the records.
+  We populate data file with 200 records using a script. Each record consist of song name, album name, and singer name and duration.
+  We then use the MM threads and read the search word from search file and search this word in the data structure and 
+  print the search record in the search file.
+  
+]
+
+PERCENT COMPLETE:
+[
+  We believe we have completed the project 100%, we have implemented entire functionality from reading records from the file 
+  to storing the records and searching the record from search file in multi threaded environment.  
+]
+
+PARTS THAT ARE NOT COMPLETE:
+[
+  None.
+]
+
+BUGS:
+[
+	Known bugs N/A  
+]
+
+FILES:
+[
+
+  Included with this project are 16 files:
+  
+  MusicInfo.java		MusicInfo class will act like POJO.
+  MusicStore.java		MusicStore class stores Data populated from DataFile which is further used in SearchWorker class.
+  PopulateWorker.java	PopulateWorker creates pool of Threads that read Data from DataFile to populate MusicStore class.
+  SearchWorker.java		SearchWorker class searches data from SearchFile in MusicStore and generate output to result class.
+  Driver.java 			Driver class is the driver that creates objects of all Interfaces of classes and control complete 
+  						program flow.
+  IMusicStore.java		Interface for MusicStore class.
+  IPopulateWorker.java	Interface for PopulateWorker class.
+  ISearchWorker.java	Interface for SearchWorker class.
+  ICreateFile.java		Interface for CreateFile class.
+  IResults.java			Interface for Display class.
+  CatchWrongInputException.java		User Defined exception class, that validates input data.
+  CreateFile.java 		Class creates DataFile and SearchFile.
+  Debug.java			Debugger class that maintains logging information.
+  Results.java			Result class stores matched values and acts as Input source for output to be displayed.
+  build.xml				Code for ANT compilation and for setting command line arguments.
+  README				The text file that you are currently reading.
+  
+]
+
+SAMPLE OUTPUT:
+
+[
+	aaa0 bbb0 ccc0 0
+	aaa2 bbb2 ccc2 2
+	aaa4 bbb4 ccc4 4
+	aaa6 bbb6 ccc6 6
+	aaa8 bbb8 ccc8 8
+	aaa10 bbb10 ccc10 10
+	aaa12 bbb12 ccc12 12
+	aaa14 bbb14 ccc14 14
+	aaa16 bbb16 ccc16 16
+	aaa18 bbb18 ccc18 18
+]
+
+TO COMPILE:
+
+[
+  Extract the project and go to the directory(using CD Command) where you have extracted the project.
+  
+  Please Compile as: ant compile
+  
+]
+
+TO RUN:
+
+[
+  Please run as: ant -Darg0=DataFile -Darg1=5 -Darg2=SearchFile -Darg3=5 run 
+]
+
+EXTRA CREDIT:
+
+[
+  In our code we have used Vector as the data structure to store the records. 
+  Vector optimizes storage management and is efficient in terms of storage as the management is done using 
+  capacity and capacitIncrement. 
+  
+  Size of the vector is the capacity of the vector and the capacityIncrement increases 
+  the storage in chunk of size capacitIncrement. If we want to insert large number of components 
+  in vector we can increase the capacity in advance by specifying or increasing size of capacityIncrement.
+
+Program to Interface and not to concrete class
+
+Input validation with user defined Exception handling
+
+]
+
+
+
+
+BIBLIOGRAPHY:
+
+This serves as evidence that we are in no way intending Academic Dishonesty.
+<Prajakta More, Kapil Madhavrao Bijamwar>
+[
+	javaworld.com
+]
+
+ACKNOWLEDGEMENT:
+[
+	javaworld.com
+]
